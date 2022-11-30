@@ -1,0 +1,7 @@
+{
+    "name":"genesis",
+    "type":"local",
+    "address":"stride1sy4vkp007vlmp2t670ev60ky2v0mdcqne8jdjs",
+    "pubkey":"{\"@type\":\"/cosmos.crypto.secp256k1.PubKey\",\"key\":\"A3IMBbjTDkFl2ML7ZHFXtkSzfR9yePSKJfLOoOlkJmkH\"}",
+    "mnemonic":"input oppose mango skate drink damage web skirt document guess abandon grace pet portion salt park erosion expand result day vault into only picture"
+}

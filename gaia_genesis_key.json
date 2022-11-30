@@ -1,0 +1,7 @@
+{
+    "name":"genesis",
+    "type":"local",
+    "address":"cosmos1dl85qsdytasc8cmmrtr5grufttpugzs29ujzk6",
+    "pubkey":"{\"@type\":\"/cosmos.crypto.secp256k1.PubKey\",\"key\":\"AhpFnASOV4DUn2mOFaAq8IJqwMvslocERTG8js6dGoyi\"}",
+    "mnemonic":"citizen delay spoon slender reward bottom reveal champion machine congress convince ridge practice table solid now snake pepper debris barrel crime salon course pottery"
+}
