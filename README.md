@@ -14,24 +14,31 @@ var Admins = map[string]bool{
 then build gaiad and strided 
 
 1. Run init.sh
+
+
 2. Replace stride_epoch value to 30s which is in ~/.stride/config/genesis.json (#121)
 ```shell
 "identifier": "stride_epoch",
 "start_time": "0001-01-01T00:00:00Z",
 "duration": "30s",
 ```
-3. Open a terminal session, run gaiad.sh 
+3. Open a terminal session, run gaiad.sh
 4. Open a new terminal session, run strided.sh
 5. Run hermes.sh
 6. Run hermes relayer with config.toml in this directory
 7. Run transfer.sh
 8. Copy ibc denom of uatom i.g) ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
-9. Register host zone for gaia
-```shell
-strided tx stakeibc register-host-zone connection-0 uatom cosmos ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2 channel-0 1 --from genesis --chain-id stride --gas auto -b block --node http://localhost:36657
-```
-10. Send uatom to gaia ica host account 
+9. Send uatom to gaia ica host account
 ```shell
 gaiad tx bank send genesis cosmos194dreqzzp6y2tfnuzvw6wzsxk48hlgh8zlgzpdmsnm7gzsv64jeqafz6pp 100uatom --from genesis --node http://localhost:26657 --chain-id cosmoshub
 ```
+10. Register host zone for gaia
+```shell
+strided tx stakeibc register-host-zone connection-0 uatom cosmos ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2 channel-0 1 --from genesis --chain-id stride --gas auto -b block --node http://localhost:36657
+```
 11. Check the icq response message from strided
+```shell
+2:12AM INF Proof validated! module: interchainquery, queryId 01173ff5167296eb4ba7c4c3d896f8b3e273a74210b91b82eb3f8b5e8a512747 module=x/interchainquery
+2:12AM INF [ICQ Resp] query 01173ff5167296eb4ba7c4c3d896f8b3e273a74210b91b82eb3f8b5e8a512747 with ttl: 1670001180949678000, resp time: 1670001168896629000. module=x/interchainquery
+2:12AM INF [ICQ Resp] executing callback for queryId (01173ff5167296eb4ba7c4c3d896f8b3e273a74210b91b82eb3f8b5e8a512747), module (stakeibc) module=x/interchainquery
+```
