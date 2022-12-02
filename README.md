@@ -1,4 +1,4 @@
-pre-requisite: add admin address to stride daemon utils/admins.go
+pre-requisite: Download the stride binary from github repo, add admin address to stride daemon utils/admins.go
 
 https://github.com/Stride-Labs/stride/blob/main/utils/admins.go
 
