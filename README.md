@@ -1,4 +1,4 @@
-pre-requisite: Download the stride binary from github repo, add admin address to stride daemon utils/admins.go
+pre-requisite: Download the stride binary from github repo(https://github.com/Stride-Labs/stride), add admin address to stride daemon utils/admins.go
 
 https://github.com/Stride-Labs/stride/blob/main/utils/admins.go
 
@@ -11,7 +11,9 @@ var Admins = map[string]bool{
 	"stride1sy4vkp007vlmp2t670ev60ky2v0mdcqne8jdjs": true, // for local test <==== this line
 }
 ```
-then build gaiad and strided 
+then build gaiad(https://github.com/cosmos/gaia) and strided 
+
+* Tested on stride v3.0.0, gaia v7.0.3
 
 1. Run init.sh
 
