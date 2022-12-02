@@ -42,3 +42,8 @@ strided tx stakeibc register-host-zone connection-0 uatom cosmos ibc/27394FB092D
 2:12AM INF [ICQ Resp] query 01173ff5167296eb4ba7c4c3d896f8b3e273a74210b91b82eb3f8b5e8a512747 with ttl: 1670001180949678000, resp time: 1670001168896629000. module=x/interchainquery
 2:12AM INF [ICQ Resp] executing callback for queryId (01173ff5167296eb4ba7c4c3d896f8b3e273a74210b91b82eb3f8b5e8a512747), module (stakeibc) module=x/interchainquery
 ```
+12. Clean up chain data
+```shell
+sudo rm -r ~/.gaia
+sudo rm -r ~/.stride
+```
