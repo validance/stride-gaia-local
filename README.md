@@ -1,5 +1,7 @@
 pre-requisite: add admin address to stride daemon utils/admins.go
 
+https://github.com/Stride-Labs/stride/blob/main/utils/admins.go
+
 ```go
 package utils
 
@@ -11,24 +13,25 @@ var Admins = map[string]bool{
 ```
 then build gaiad and strided 
 
-1. run init.sh
-2. replace stride_epoch value to 30s which is in ~/.stride/config/genesis.json (#121)
+1. Run init.sh
+2. Replace stride_epoch value to 30s which is in ~/.stride/config/genesis.json (#121)
 ```shell
 "identifier": "stride_epoch",
 "start_time": "0001-01-01T00:00:00Z",
 "duration": "30s",
 ```
-3. open a terminal session, run gaiad.sh 
-4. open a new terminal session, run strided.sh
-5. run hermes.sh
-6. run hermes relayer with config.toml in this directory
-7. run transfer.sh
-8. copy ibc denom of uatom i.g) ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
-9. register host zone for gaia
+3. Open a terminal session, run gaiad.sh 
+4. Open a new terminal session, run strided.sh
+5. Run hermes.sh
+6. Run hermes relayer with config.toml in this directory
+7. Run transfer.sh
+8. Copy ibc denom of uatom i.g) ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+9. Register host zone for gaia
 ```shell
 strided tx stakeibc register-host-zone connection-0 uatom cosmos ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2 channel-0 1 --from genesis --chain-id stride --gas auto -b block --node http://localhost:36657
 ```
-10. send uatom to gaia ica host account 
+10. Send uatom to gaia ica host account 
 ```shell
 gaiad tx bank send genesis cosmos194dreqzzp6y2tfnuzvw6wzsxk48hlgh8zlgzpdmsnm7gzsv64jeqafz6pp 100uatom --from genesis --node http://localhost:26657 --chain-id cosmoshub
 ```
+11. Check the icq response message from strided
