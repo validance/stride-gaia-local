@@ -32,7 +32,7 @@ then build gaiad(https://github.com/cosmos/gaia) and strided
 8. Copy ibc denom of uatom i.g) ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
 9. Send uatom to gaia ica host account
 ```shell
-gaiad tx bank send genesis cosmos194dreqzzp6y2tfnuzvw6wzsxk48hlgh8zlgzpdmsnm7gzsv64jeqafz6pp 100uatom --from genesis --node http://localhost:26657 --chain-id cosmoshub
+gaiad tx bank send genesis {gaia_address_for_withdraw_on_stride} 100uatom --from genesis --node http://localhost:26657 --chain-id cosmoshub
 ```
 10. Register host zone for gaia
 ```shell
